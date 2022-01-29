@@ -1,21 +1,17 @@
-import { Home } from './views/Home';
-import { Products } from './views/Products';
-import { Contacts } from './views/Contacts';
-import { NotFound } from './views/NotFound';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { Home, Products, Contacts, NotFound } from './views';
+import { Layout } from './components';
 
 export const App = () => {
   return (
     <>
-      <Link to="/">Home</Link>
-      <Link to="/products">Products</Link>
-      <Link to="/contacts">Contacts</Link>
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="contacts" element={<Contacts />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </>
   );
