@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderStyled = styled.header`
   min-height: 70px;
@@ -17,5 +18,11 @@ export const HeaderStyled = styled.header`
     &:hover {
       color: orange;
     }
+  }
+`;
+
+export const NavLinkStyled = styled(NavLink)`
+  &.active {
+    color: orange;
   }
 `;
