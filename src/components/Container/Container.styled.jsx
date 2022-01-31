@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const ContainerStyled = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 800px;
   padding: 0 20px;
-  text-align: center;
 `;
